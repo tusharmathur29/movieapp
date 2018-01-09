@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 0.0.0 (Windows 10 0.0.0)" package="" timestamp="2018-01-05T12:52:31" id="0" hostname="vlab-java35" tests="20" errors="0" failures="0" time="1.928">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/63.0.3239.84 Safari/537.36"/>
+  </properties>
+  <testcase name="DashboardComponent should be created" time="0.529" classname="DashboardComponent"/>
+  <testcase name="MoviecardComponent should be created" time="0.123" classname="MoviecardComponent"/>
+  <testcase name="MoviecardComponent should calculate correct ratings" time="0.062" classname="MoviecardComponent"/>
+  <testcase name="MoviecardComponent should taggle recommendation of the movie" time="0.074" classname="MoviecardComponent"/>
+  <testcase name="MoviesectionComponent should be created" time="0.17" classname="MoviesectionComponent"/>
+  <testcase name="MoviesectionComponent should get data on init when target is defined" time="0.13" classname="MoviesectionComponent"/>
+  <testcase name="MoviesectionComponent should get data for target" time="0.114" classname="MoviesectionComponent"/>
+  <testcase name="MoviesectionComponent should not call service for parameter based section" time="0.118" classname="MoviesectionComponent"/>
+  <testcase name="PaginationComponent should be created" time="0.051" classname="PaginationComponent"/>
+  <testcase name="PaginationComponent should divide totalPages in correct groups" time="0.064" classname="PaginationComponent"/>
+  <testcase name="PaginationComponent it should calculate correct current group number" time="0.05" classname="PaginationComponent"/>
+  <testcase name="RecommendationsComponent should be created" time="0.152" classname="RecommendationsComponent"/>
+  <testcase name="SearchsectionComponent should be created" time="0.099" classname="SearchsectionComponent"/>
+  <testcase name="SearchsectionComponent should call data service to search a movie" time="0.13" classname="SearchsectionComponent"/>
+  <testcase name="DataService should be created" time="0.014" classname="DataService"/>
+  <testcase name="RecommendationService should be created" time="0.012" classname="RecommendationService"/>
+  <testcase name="RecommendationService should maintain reverse recommendation order" time="0.008" classname="RecommendationService"/>
+  <testcase name="RecommendationService should verify recommended movie" time="0.009" classname="RecommendationService"/>
+  <testcase name="RecommendationService should unrecommend movie" time="0.009" classname="RecommendationService"/>
+  <testcase name="RecommendationService should prepare array from object with reverse order maintained" time="0.01" classname="RecommendationService"/>
+  <system-out>
+    <![CDATA[HeadlessChrome 0.0.0 (Windows 10 0.0.0) LOG: ['full', 'full', 'full', 'half']
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

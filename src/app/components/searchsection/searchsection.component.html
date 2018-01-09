@@ -1,0 +1,43 @@
+<section class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Search Movies</h3>
+    </div>
+    <div class="panel-body ">
+      
+        <form (submit)="searchMovie(movieSearch.value)" class="margin-bottom-10"> 
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                <div class="input-group">
+             <input type="text" id="search-text-field" required class="form-control" placeholder="Search By Movie Name..." #movieSearch/>
+             <div class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" id="search-button">
+                    <i class="fa fa-search" aria-hidden="true"></i> 
+                  </button>
+             </div>
+             </div>
+              </div>
+              <div class="col-xs-6 col-md-8" *ngIf="searchResult">
+                <div class="float-right">
+                  <app-pagination [totalPages]="searchResult.total_pages" [currentPage]="searchResult.page" (paginate)="navigateToPage($event)"></app-pagination>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+          <div class="row scrollable-panel" [ngClass]="{'no-overflow' : inProgress}" #scrollPanel> 
+            <div class="loader-box" *ngIf="inProgress">
+              <div>
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
+              <div> <span class="card-text">Please Wait ...</span>
+              </div>
+            </div>
+          <div class="col-sm-3 col-landscape-6" *ngFor="let result of movieResults">
+            <app-moviecard [movie]="result"></app-moviecard>
+          </div>
+          <div class="col-sm-12 text-center box-content-center" *ngIf="movieResults.length == 0">
+            <h3 class="align-middle">No Movies to display</h3>
+          </div>
+        </div>
+     
+    </div>
+  </section>

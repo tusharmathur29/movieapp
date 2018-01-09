@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Dashboard Page tests" timestamp="2018-01-05T18:23:16" hostname="localhost" time="11.674" errors="0" tests="11" skipped="0" disabled="0" failures="0">
+  <testcase classname="Dashboard Page tests" name="should highlight dashboard menu item on dashboard page" time="3.621" />
+  <testcase classname="Dashboard Page tests" name="should display 3 sections on dashboard page" time="1.129" />
+  <testcase classname="Dashboard Page tests" name="should have the first section title as Forthcoming Movies on dashboard page" time="0.766" />
+  <testcase classname="Dashboard Page tests" name="should have the second section title as Trending Movies on dashboard page" time="0.725" />
+  <testcase classname="Dashboard Page tests" name="should have the third section title as Recommended Movies on dashboard page" time="0.76" />
+  <testcase classname="Dashboard Page tests" name="should highlight Recommendations menu item on My Recommendation Page" time="0.705" />
+  <testcase classname="Dashboard Page tests" name="should display 2 sections on My Recommendation Page" time="0.626" />
+  <testcase classname="Dashboard Page tests" name="should have the first section title as Search Movies on My Recommendation Page" time="0.971" />
+  <testcase classname="Dashboard Page tests" name="should have search text field in search section on My Recommendation Page" time="0.78" />
+  <testcase classname="Dashboard Page tests" name="should have search button in search section on My Recommendation Page" time="0.849" />
+  <testcase classname="Dashboard Page tests" name="should have the second section title as My Recommendations on My Recommendation Page" time="0.74" />
+ </testsuite>
+</testsuites>

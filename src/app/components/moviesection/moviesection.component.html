@@ -1,0 +1,34 @@
+<section class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-sm-6" [ngClass]="totalPages > 1 ? 'col-sm-6' : 'col-sm-12'">
+        <h3 class="panel-title margin-right-10">
+          <span class="section-maintitle">{{ title }}</span>
+          <span class="section-subtitle" *ngIf="subtitle">({{ subtitle }})</span>
+        </h3>
+      </div>
+      <div class="col-sm-6" *ngIf="totalPages > 1">
+        <app-pagination [totalPages]="totalPages" [currentPage]="currentPage" (paginate)="navigateToPage($event)"></app-pagination>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body ">
+    <div class="row scrollable-panel" [ngClass]="{'no-overflow' : inProgress}" #scrollPanel>
+      <div class="loader-box" *ngIf="inProgress">
+        <div>
+          <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        </div>
+        <div>
+          <span class="card-text">Please Wait ...</span>
+        </div>
+      </div>
+      <div class="col-sm-3 col-landscape-6" *ngFor="let result of movieResults">
+        <app-moviecard [movie]="result"></app-moviecard>
+      </div>
+      <div class="col-sm-12 text-center box-content-center" *ngIf="!movieResults || movieResults.length == 0">
+        <h3 class="align-middle">No Movies to display</h3>
+      </div>
+    </div>
+
+  </div>
+</section>

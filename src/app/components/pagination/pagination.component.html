@@ -1,0 +1,37 @@
+<!--Pagination -->
+<nav class="pagination-float" *ngIf="totalPages > 1">
+    <ul class="pagination pagination-circle pg-blue mb-0">
+
+        <!--First-->
+        <li class="page-item" [ngClass]="{'disabled' : currentPage == 1}">
+          <a class="page-link" (click)="loadPage(1)">First</a>
+        </li>
+
+        <!--Arrow left-->
+        <li class="page-item" [ngClass]="{'disabled' : currentGroupNum == 1}">
+            <a class="page-link" aria-label="Previous" (click)="loadPreviousGroup()">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+
+        <!--Numbers-->
+        <li class="page-item " *ngFor="let page of linksObj[currentGroupNum]" [ngClass]="{'active' : page == currentPage}">
+          <a class="page-link" (click)="loadPage(page)">{{ page }}</a></li>
+        
+
+        <!--Arrow right-->
+        <li class="page-item" [ngClass]="{'disabled' : currentGroupNum == totalGroupNum}">
+            <a class="page-link" aria-label="Next" (click)="loadNextGroup()">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+
+        <!--First-->
+        <li class="page-item" [ngClass]="{'disabled' : currentPage == totalPages}" >
+          <a class="page-link" (click)="loadPage(totalPages)">Last</a></li>
+
+    </ul>
+</nav>
+<!--/Pagination -->
